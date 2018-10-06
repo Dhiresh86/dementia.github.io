@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body bgcolor="#000000">
+
+<div id="timeofday" class="timeofday"></div>
+<div id="day" class="day"></div>
+<div id="clockDisplay" class="clockStyle"></div>
+<div id="datestuff" class="date"></div>
+
+
+
+
+<script type="text/javascript" language="javascript">
+function renderTime() {
+      var currentTime = new Date();
+      var diem = "AM";
+      var h = currentTime.getHours();
+      var m = currentTime.getMinutes();
+
+      if (h==0) {
+        h=12;
+      } else if (h > 12) {
+        h = h -12;
+        diem = "PM"
+      }
+      if (h < 10) {
+        h = "0" +h;
+      }
+      if (m < 10) {
+        m = "0" +m;
+      }
+
+
+      var myClock = document.getElementById('clockDisplay');
+      myClock.textContent = h + " " + ":" + " " + m + " " + diem;
+}
+renderTime();
+</script>
+
+
+  <script type="text/javascript" language="javascript">
+  <!--
+
+  var m_names = ["JANUARY", "FEBRUARY", "MARCH",
+  "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER",
+  "OCTOBER", "NOVEMBER", "DECEMBER"];
+
+  var d_names = ["SUNDAY","MONDAY", "TUESDAY", "WEDNESDAY",
+  "THURSDAY", "FRIDAY", "SATURDAY"];
+
+  var myDate = new Date();
+  myDate.setDate(myDate.getDate()+7);
+  var curr_date = myDate.getDate();
+  var curr_month = myDate.getMonth();
+  var curr_day  = myDate.getDay();
+  var curr_year = myDate.getFullYear();
+  var date = document.getElementById('datestuff')
+  date.textContent = curr_date + " " + m_names[curr_month]+ " " + curr_year;
+
+  //-->
+  </script>
+
+</body>
+
+
+<script type="text/javascript" language="javascript">
+
+  var d_names = ["SUNDAY","MONDAY", "TUESDAY", "WEDNESDAY",
+  "THURSDAY", "FRIDAY", "SATURDAY"];
+
+  var curr_day  = myDate.getDay();
+
+  var day = document.getElementById('day')
+  day.textContent = d_names[curr_day];
+
+</script>
+
+
+</html>

@@ -1,0 +1,37 @@
+
+.day {
+  color: #ffffff;
+  font-size: 150px;
+  text-align: center;
+  padding-top: 20px;
+  font-family:  sans-serif;
+
+}
+
+
+
+.clockStyle {
+  font-size: 300px;
+  padding-top:100px;
+  color: #ffffff;
+  font-weight: hold;
+  text-align: center;
+  font-family:  sans-serif;
+}
+
+
+
+
+.date {
+  color: #ffffff;
+  font-size: 150px;
+  text-align: center;
+  padding-top: 80px;
+  font-family:  sans-serif;
+
+}
+
+.body {
+  height: auto;
+  width: auto;
+}
